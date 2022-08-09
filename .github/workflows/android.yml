@@ -5,7 +5,7 @@ jobs:
     name: NDK-R22b
     runs-on: ubuntu-20.04
     steps:
-    - name: Setup Android NDK R22
+    - name: Setup Android NDK R22b
       uses: nttld/setup-ndk@v1
       id: setup-ndk
       with:
@@ -14,4 +14,5 @@ jobs:
     - uses: actions/checkout@v2
     - name: build
       run: |
-        $ANDROID_NDK_HOME/ndk-build clean NDK_PROJECT_PATH=./ APP_BUILD_SCRIPT=./Android.mk NDK_APP_APPLICATION_MK=./Application.mk
+        $ANDROID_NDK_HOME/ndk-build NDK_PROJECT_PATH=./ APP_BUILD_SCRIPT=./Android.mk NDK_APP_APPLICATION_MK=./Application.mk clean
+        $ANDROID_NDK_HOME/ndk-build NDK_PROJECT_PATH=./ APP_BUILD_SCRIPT=./Android.mk NDK_APP_APPLICATION_MK=./Application.mk

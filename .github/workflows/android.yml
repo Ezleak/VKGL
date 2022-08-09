@@ -2,15 +2,15 @@ name: Android
 on: [push]
 jobs:
   build:
-    name: NDK-R21e
+    name: NDK-R22b
     runs-on: ubuntu-20.04
     steps:
-    - name: Setup Android NDK R23
+    - name: Setup Android NDK R22
       uses: nttld/setup-ndk@v1
       id: setup-ndk
       with:
-        ndk-version: r21e
-        add-to-path: false
+        ndk-version: r22b
+        add-to-path: true
     - uses: actions/checkout@v2
     - name: build
       run: |

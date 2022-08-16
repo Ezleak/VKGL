@@ -350,7 +350,7 @@ bool Anvil::IO::read_file(std::string in_filename,
         FILE*         file_handle  = nullptr;
         size_t        n_bytes_read = 0;
 
-        file_handle = fopen64(in_filename.c_str(),
+        file_handle = fopen(in_filename.c_str(),
                              (in_is_text_file) ? "rt" : "rb");
 
         if (file_handle == 0)
@@ -490,7 +490,7 @@ bool Anvil::IO::read_file(std::string in_filename,
         FILE*  file_handle  = nullptr;
         size_t n_bytes_read = 0;
 
-        file_handle = fopen64(in_filename.c_str(),
+        file_handle = fopen(in_filename.c_str(),
                               (in_is_text_file) ? "rt" : "rb");
 
         if (file_handle == 0)

@@ -46,7 +46,7 @@ LOCAL_CFLAGS += -funwind-tables -fvisibility=hidden
 
 LOCAL_CFLAGS += -DVK_USE_PLATFORM_ANDROID_KHR
 
-LOCAL_LDLIBS := -ldl
+LOCAL_LDLIBS := -ldl -lc++_static
 #building as a shared lib
 
 LOCAL_STATIC_LIBRARIES := Anvil
@@ -104,7 +104,7 @@ LOCAL_CFLAGS += -funwind-tables -fvisibility=hidden
 
 LOCAL_CFLAGS += -DVK_USE_PLATFORM_ANDROID_KHR
 
-LOCAL_LDLIBS := -ldl -landroid
+LOCAL_LDLIBS := -ldl -landroid -lc++_static
 #building as a shared lib
 
 include $(BUILD_SHARED_LIBRARY)

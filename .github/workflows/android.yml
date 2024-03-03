@@ -1,5 +1,5 @@
 name: Android
-on: [push, workflow_dispath]
+on: [push, workflow_dispatch]
 jobs:
   build:
     name: NDK-R22b

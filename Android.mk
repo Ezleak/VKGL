@@ -98,12 +98,12 @@ LOCAL_SRC_FILES := $(MY_SRC_LIST)
 
 
 LOCAL_CXXFLAGS = -g -std=c++11 -Wall
-#LOCAL_CXXFLAGS += -O3
+#LOCAL_CXXFLAGS += -Ofast
 LOCAL_CXXFLAGS += -funwind-tables -fvisibility=hidden
 
 LOCAL_CXXFLAGS += -DVK_USE_PLATFORM_ANDROID_KHR
 
-LOCAL_LDLIBS := -ldl -landroid
+LOCAL_LDLIBS := -ldl -landroid -lvulkan -lEGL
 #building as a shared lib
 
 include $(BUILD_SHARED_LIBRARY)

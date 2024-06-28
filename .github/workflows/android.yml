@@ -3,13 +3,13 @@ on: [push, workflow_dispatch]
 jobs:
   build:
     name: VKGL
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       - name: Setup Android NDK
         uses: nttld/setup-ndk@v1
         id: setup-ndk
         with:
-          ndk-version: r26b
+          ndk-version: r26d
           add-to-path: true
       - uses: actions/checkout@v2
       - name: Build

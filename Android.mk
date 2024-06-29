@@ -103,7 +103,7 @@ LOCAL_CXXFLAGS += -funwind-tables -fvisibility=hidden
 
 LOCAL_CXXFLAGS += -DVK_USE_PLATFORM_ANDROID_KHR
 
-LOCAL_LDLIBS := -ldl -landroid -lvulkan -lEGL
+LOCAL_LDLIBS := -ldl -landroid -lvulkan -lEGL -lGLESv2 -lGLESv3
 #building as a shared lib
 
 include $(BUILD_SHARED_LIBRARY)

@@ -33,6 +33,6 @@
 
 APP_ABI := all
 APP_BUILD_SCRIPT := Android.mk
-APP_STL := c++_static
-APP_PLATFORM := android-9
+APP_STL := c++_shared
+APP_PLATFORM := android-26
 NDK_TOOLCHAIN_VERSION := 4.9

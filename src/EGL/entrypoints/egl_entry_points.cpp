@@ -28,10 +28,10 @@
 EGLAPI EGLDisplay EGLAPIENTRY
 eglGetDisplay(EGLNativeDisplayType display)
 {
-    //FUN_ENTRY(DEBUG_DEPTH);
+    //FUN_ENTRY;
     
-    FUN_ENTRY_GLAPI_CALL(DEBUG_DEPTH);
-    FUN_ENTRY(DEBUG_DEPTH);
+    FUN_ENTRY_GLAPI_CALL;
+    FUN_ENTRY;
     	
 	EGL::eglDisplay_t* eglDisplay = new EGL::eglDisplay_t();
 	
@@ -43,8 +43,8 @@ eglGetError(void)
 {
     //THREAD_EXEC_RETURN(GetError());
     
-    FUN_ENTRY_GLAPI_CALL(DEBUG_DEPTH);
-    FUN_ENTRY(DEBUG_DEPTH);
+    FUN_ENTRY_GLAPI_CALL;
+    FUN_ENTRY;
     
     return EGL::get_current_egl_error();
 }
@@ -54,8 +54,8 @@ eglBindAPI(EGLenum api)
 {
     //THREAD_EXEC_RETURN(BindAPI(api));
     
-    FUN_ENTRY_GLAPI_CALL(DEBUG_DEPTH);
-    FUN_ENTRY(DEBUG_DEPTH);
+    FUN_ENTRY_GLAPI_CALL;
+    FUN_ENTRY;
     
     //TODO
     return EGL_SUCCESS;
@@ -66,8 +66,8 @@ eglQueryAPI(void)
 {
     //THREAD_EXEC_RETURN(QueryAPI());
     
-    FUN_ENTRY_GLAPI_CALL(DEBUG_DEPTH);
-    FUN_ENTRY(DEBUG_DEPTH);
+    FUN_ENTRY_GLAPI_CALL;
+    FUN_ENTRY;
     
     return EGL_OPENGL_ES_API;
 }
@@ -77,8 +77,8 @@ eglWaitClient(void)
 {
     //THREAD_EXEC_RETURN(WaitClient());
     
-    FUN_ENTRY_GLAPI_CALL(DEBUG_DEPTH);
-    FUN_ENTRY(DEBUG_DEPTH);
+    FUN_ENTRY_GLAPI_CALL;
+    FUN_ENTRY;
     
     //TODO
     
@@ -92,8 +92,8 @@ eglReleaseThread(void)
 {
     //THREAD_EXEC_RETURN(ReleaseThread());
     
-    FUN_ENTRY_GLAPI_CALL(DEBUG_DEPTH);
-    FUN_ENTRY(DEBUG_DEPTH);
+    FUN_ENTRY_GLAPI_CALL;
+    FUN_ENTRY;
     
     //TODO
     return EGL_SUCCESS;
@@ -104,8 +104,8 @@ eglGetCurrentContext(void)
 {
     //THREAD_EXEC_RETURN(GetCurrentContext());
     
-    FUN_ENTRY_GLAPI_CALL(DEBUG_DEPTH);
-    FUN_ENTRY(DEBUG_DEPTH);
+    FUN_ENTRY_GLAPI_CALL;
+    FUN_ENTRY;
     
     EGL::eglDisplay_t* eglDisplay = (EGL::eglDisplay_t*)EGL::get_current_display();
     
@@ -119,8 +119,8 @@ eglGetCurrentSurface(EGLint readdraw)
 {
     //THREAD_EXEC_RETURN(GetCurrentSurface(readdraw));
     
-    FUN_ENTRY_GLAPI_CALL(DEBUG_DEPTH);
-    FUN_ENTRY(DEBUG_DEPTH);
+    FUN_ENTRY_GLAPI_CALL;
+    FUN_ENTRY;
     
     EGL::eglDisplay_t* eglDisplay = (EGL::eglDisplay_t*)EGL::get_current_display();
     
@@ -136,8 +136,8 @@ eglGetCurrentDisplay(void)
 {
     //THREAD_EXEC_RETURN(GetCurrentDisplay());
     
-    FUN_ENTRY_GLAPI_CALL(DEBUG_DEPTH);
-    FUN_ENTRY(DEBUG_DEPTH);
+    FUN_ENTRY_GLAPI_CALL;
+    FUN_ENTRY;
     
     EGL::eglDisplay_t* eglDisplay = (EGL::eglDisplay_t*)EGL::get_current_display();
     
@@ -149,8 +149,8 @@ eglCreateContext(EGLDisplay dpy, EGLConfig config, EGLContext share_context, con
 {
     //THREAD_EXEC_RETURN(CreateContext(dpy, config, share_context, attrib_list));
     
-    FUN_ENTRY_GLAPI_CALL(DEBUG_DEPTH);
-    FUN_ENTRY(DEBUG_DEPTH);
+    FUN_ENTRY_GLAPI_CALL;
+    FUN_ENTRY;
     
     EGL::eglContext_t *egl_ctx = new EGL::eglContext_t();
     
@@ -176,8 +176,8 @@ eglDestroyContext(EGLDisplay dpy, EGLContext ctx)
 {
     //THREAD_EXEC_RETURN(DestroyContext(dpy, ctx));
     
-    FUN_ENTRY_GLAPI_CALL(DEBUG_DEPTH);
-    FUN_ENTRY(DEBUG_DEPTH);
+    FUN_ENTRY_GLAPI_CALL;
+    FUN_ENTRY;
     
     EGL::eglContext_t *egl_ctx = (EGL::eglContext_t*)ctx;
     if (egl_ctx == nullptr) return EGL_SUCCESS;
@@ -207,8 +207,8 @@ eglMakeCurrent(EGLDisplay dpy, EGLSurface draw, EGLSurface read, EGLContext ctx)
 {
     //THREAD_EXEC_RETURN(MakeCurrent(dpy, draw, read, ctx));
     
-    FUN_ENTRY_GLAPI_CALL(DEBUG_DEPTH);
-    FUN_ENTRY(DEBUG_DEPTH);
+    FUN_ENTRY_GLAPI_CALL;
+    FUN_ENTRY;
     
     auto egl_dpy = (EGL::eglDisplay_t*)dpy;
     
@@ -282,8 +282,8 @@ eglQueryContext(EGLDisplay dpy, EGLContext ctx, EGLint attribute, EGLint *value)
 {
     //THREAD_EXEC_RETURN(QueryContext(dpy, ctx, attribute, value));
     
-    FUN_ENTRY_GLAPI_CALL(DEBUG_DEPTH);
-    FUN_ENTRY(DEBUG_DEPTH);
+    FUN_ENTRY_GLAPI_CALL;
+    FUN_ENTRY;
     
     //TODO
     return EGL_SUCCESS;
@@ -294,8 +294,8 @@ eglWaitGL(void)
 {
     //THREAD_EXEC_RETURN(WaitGL());
     
-    FUN_ENTRY_GLAPI_CALL(DEBUG_DEPTH);
-    FUN_ENTRY(DEBUG_DEPTH);
+    FUN_ENTRY_GLAPI_CALL;
+    FUN_ENTRY;
 
     //TODO
     
@@ -309,8 +309,8 @@ eglWaitNative(EGLint engine)
 {
     //THREAD_EXEC_RETURN(WaitNative(engine));
     
-    FUN_ENTRY_GLAPI_CALL(DEBUG_DEPTH);
-    FUN_ENTRY(DEBUG_DEPTH);
+    FUN_ENTRY_GLAPI_CALL;
+    FUN_ENTRY;
 
     //TODO
     return EGL_SUCCESS;
@@ -321,8 +321,8 @@ eglInitialize(EGLDisplay dpy, EGLint *major, EGLint *minor)
 {
     //DRIVER_EXEC_RETURN(dpy, Initialize(dpy, major, minor));
     
-    FUN_ENTRY_GLAPI_CALL(DEBUG_DEPTH);
-    FUN_ENTRY(DEBUG_DEPTH);
+    FUN_ENTRY_GLAPI_CALL;
+    FUN_ENTRY;
     
     EGLBoolean result = EGL_SUCCESS;
     char *error = NULL;
@@ -371,8 +371,8 @@ eglTerminate(EGLDisplay dpy)
 {
     //DRIVER_EXEC(dpy, Terminate(dpy));
     
-    FUN_ENTRY_GLAPI_CALL(DEBUG_DEPTH);
-    FUN_ENTRY(DEBUG_DEPTH);
+    FUN_ENTRY_GLAPI_CALL;
+    FUN_ENTRY;
     //TODO
     #if defined(USE_COMBINED_EGL_OPENGL)
     	m_EGLInterface = nullptr;
@@ -396,10 +396,10 @@ eglTerminate(EGLDisplay dpy)
 EGLAPI const char * EGLAPIENTRY
 eglQueryString(EGLDisplay dpy, EGLint name)
 {
-    //FUN_ENTRY(DEBUG_DEPTH);
+    //FUN_ENTRY;
     
-    FUN_ENTRY_GLAPI_CALL(DEBUG_DEPTH);
-    FUN_ENTRY(DEBUG_DEPTH);
+    FUN_ENTRY_GLAPI_CALL;
+    FUN_ENTRY;
 
     switch(name) {
     case EGL_CLIENT_APIS:   return "EGL_OPENGL_ES_API EGL_OPENGL_API"; break;
@@ -421,8 +421,8 @@ eglGetConfigs(EGLDisplay dpy, EGLConfig *configs, EGLint config_size, EGLint *nu
 {
     //DRIVER_EXEC_RETURN(dpy, GetConfigs(dpy, configs, config_size, num_config));
     
-    FUN_ENTRY_GLAPI_CALL(DEBUG_DEPTH);
-    FUN_ENTRY(DEBUG_DEPTH);
+    FUN_ENTRY_GLAPI_CALL;
+    FUN_ENTRY;
     
     EGL::Config::get_configs_for_attribs ((int**)configs, config_size, num_config, nullptr);
     
@@ -434,8 +434,8 @@ eglChooseConfig(EGLDisplay dpy, const EGLint *attrib_list, EGLConfig *configs, E
 {
     //DRIVER_EXEC_RETURN(dpy, ChooseConfig(dpy, attrib_list, configs, config_size, num_config));
     
-    FUN_ENTRY_GLAPI_CALL(DEBUG_DEPTH);
-    FUN_ENTRY(DEBUG_DEPTH);
+    FUN_ENTRY_GLAPI_CALL;
+    FUN_ENTRY;
     
     EGL::Config::get_configs_for_attribs ((int**)configs, config_size, num_config, (int*)attrib_list);
     
@@ -447,8 +447,8 @@ eglGetConfigAttrib(EGLDisplay dpy, EGLConfig config, EGLint attribute, EGLint *v
 {
     //DRIVER_EXEC_RETURN(dpy, GetConfigAttrib(dpy, config, attribute, value));
     
-    FUN_ENTRY_GLAPI_CALL(DEBUG_DEPTH);
-    FUN_ENTRY(DEBUG_DEPTH);
+    FUN_ENTRY_GLAPI_CALL;
+    FUN_ENTRY;
     
     int out_value = EGL::Config::get_config_value_from_attrib ((int*)config, attribute);
     
@@ -462,8 +462,8 @@ eglCreateWindowSurface(EGLDisplay dpy, EGLConfig config, EGLNativeWindowType win
 {
     //DRIVER_EXEC_RETURN(dpy, CreateWindowSurface(dpy, config, win, attrib_list));
     
-    FUN_ENTRY_GLAPI_CALL(DEBUG_DEPTH);
-    FUN_ENTRY(DEBUG_DEPTH);
+    FUN_ENTRY_GLAPI_CALL;
+    FUN_ENTRY;
     
     EGL::eglSurface_t *egl_surf = new EGL::eglSurface_t();
     
@@ -477,8 +477,8 @@ eglCreatePbufferSurface(EGLDisplay dpy, EGLConfig config, const EGLint *attrib_l
 {
     //DRIVER_EXEC_RETURN(dpy, CreatePbufferSurface(dpy, config, attrib_list));
     
-    FUN_ENTRY_GLAPI_CALL(DEBUG_DEPTH);
-    FUN_ENTRY(DEBUG_DEPTH);
+    FUN_ENTRY_GLAPI_CALL;
+    FUN_ENTRY;
     
     //TODO
     return EGL_NO_SURFACE;
@@ -489,8 +489,8 @@ eglCreatePixmapSurface(EGLDisplay dpy, EGLConfig config, EGLNativePixmapType pix
 {
     //DRIVER_EXEC_RETURN(dpy, CreatePixmapSurface(dpy, config, pixmap, attrib_list));
     
-    FUN_ENTRY_GLAPI_CALL(DEBUG_DEPTH);
-    FUN_ENTRY(DEBUG_DEPTH);
+    FUN_ENTRY_GLAPI_CALL;
+    FUN_ENTRY;
     
     //TODO
     return EGL_NO_SURFACE;
@@ -501,8 +501,8 @@ eglDestroySurface(EGLDisplay dpy, EGLSurface surface)
 {
     //DRIVER_EXEC_RETURN(dpy, DestroySurface(dpy, surface));
     
-    FUN_ENTRY_GLAPI_CALL(DEBUG_DEPTH);
-    FUN_ENTRY(DEBUG_DEPTH);
+    FUN_ENTRY_GLAPI_CALL;
+    FUN_ENTRY;
     
     EGL::eglSurface_t *egl_surf = (EGL::eglSurface_t*)surface;
     if (egl_surf == nullptr) return EGL_SUCCESS;
@@ -524,8 +524,8 @@ eglQuerySurface(EGLDisplay dpy, EGLSurface surface, EGLint attribute, EGLint *va
 {
     //DRIVER_EXEC_RETURN(dpy, QuerySurface(dpy, surface, attribute, value));
     
-    FUN_ENTRY_GLAPI_CALL(DEBUG_DEPTH);
-    FUN_ENTRY(DEBUG_DEPTH);
+    FUN_ENTRY_GLAPI_CALL;
+    FUN_ENTRY;
     
     //TODO
     return EGL_SUCCESS;
@@ -536,8 +536,8 @@ eglCreatePbufferFromClientBuffer(EGLDisplay dpy, EGLenum buftype, EGLClientBuffe
 {
     //DRIVER_EXEC_RETURN(dpy, CreatePbufferFromClientBuffer(dpy, buftype, buffer, config, attrib_list));
     
-    FUN_ENTRY_GLAPI_CALL(DEBUG_DEPTH);
-    FUN_ENTRY(DEBUG_DEPTH);
+    FUN_ENTRY_GLAPI_CALL;
+    FUN_ENTRY;
     
     //TODO
     return EGL_NO_SURFACE;
@@ -548,8 +548,8 @@ eglSurfaceAttrib(EGLDisplay dpy, EGLSurface surface, EGLint attribute, EGLint va
 {
     //DRIVER_EXEC_RETURN(dpy, SurfaceAttrib(dpy, surface, attribute, value));
     
-    FUN_ENTRY_GLAPI_CALL(DEBUG_DEPTH);
-    FUN_ENTRY(DEBUG_DEPTH);
+    FUN_ENTRY_GLAPI_CALL;
+    FUN_ENTRY;
     
     //TODO
     return EGL_SUCCESS;
@@ -560,8 +560,8 @@ eglBindTexImage(EGLDisplay dpy, EGLSurface surface, EGLint buffer)
 {
     //DRIVER_EXEC_RETURN(dpy, BindTexImage(dpy, surface, buffer));
     
-    FUN_ENTRY_GLAPI_CALL(DEBUG_DEPTH);
-    FUN_ENTRY(DEBUG_DEPTH);
+    FUN_ENTRY_GLAPI_CALL;
+    FUN_ENTRY;
     
     //TODO
     return EGL_SUCCESS;
@@ -572,8 +572,8 @@ eglReleaseTexImage(EGLDisplay dpy, EGLSurface surface, EGLint buffer)
 {
     //DRIVER_EXEC_RETURN(dpy, ReleaseTexImage(dpy, surface, buffer));
     
-    FUN_ENTRY_GLAPI_CALL(DEBUG_DEPTH);
-    FUN_ENTRY(DEBUG_DEPTH);
+    FUN_ENTRY_GLAPI_CALL;
+    FUN_ENTRY;
     
     //TODO
     return EGL_SUCCESS;
@@ -584,8 +584,8 @@ eglSwapInterval(EGLDisplay dpy, EGLint interval)
 {
     //DRIVER_EXEC_RETURN(dpy, SwapInterval(dpy, interval));
     
-    FUN_ENTRY_GLAPI_CALL(DEBUG_DEPTH);
-    FUN_ENTRY(DEBUG_DEPTH);
+    FUN_ENTRY_GLAPI_CALL;
+    FUN_ENTRY;
     
     //TODO
     return EGL_SUCCESS;
@@ -596,8 +596,8 @@ eglSwapBuffers(EGLDisplay dpy, EGLSurface surface)
 {
     //DRIVER_EXEC_RETURN(dpy, SwapBuffers(dpy, surface));
     
-    FUN_ENTRY_GLAPI_CALL(DEBUG_DEPTH);
-    FUN_ENTRY(DEBUG_DEPTH);
+    FUN_ENTRY_GLAPI_CALL;
+    FUN_ENTRY;
     
     auto result = EGL_FALSE;
     
@@ -625,8 +625,8 @@ eglCopyBuffers(EGLDisplay dpy, EGLSurface surface, EGLNativePixmapType target)
 {
     //DRIVER_EXEC_RETURN(dpy, CopyBuffers(dpy, surface, target));
     
-    FUN_ENTRY_GLAPI_CALL(DEBUG_DEPTH);
-    FUN_ENTRY(DEBUG_DEPTH);
+    FUN_ENTRY_GLAPI_CALL;
+    FUN_ENTRY;
     
     //TODO
     return EGL_SUCCESS;
@@ -646,8 +646,8 @@ eglCreateImageKHR(EGLDisplay dpy, EGLContext ctx, EGLenum target, EGLClientBuffe
 {
     //DRIVER_EXEC_RETURN(dpy, CreateImageKHR(dpy, ctx, target, buffer, attrib_list));
     
-    FUN_ENTRY_GLAPI_CALL(DEBUG_DEPTH);
-    FUN_ENTRY(DEBUG_DEPTH);
+    FUN_ENTRY_GLAPI_CALL;
+    FUN_ENTRY;
 }
 
 EGLAPI EGLBoolean EGLAPIENTRY
@@ -655,8 +655,8 @@ eglDestroyImageKHR(EGLDisplay dpy, EGLImageKHR image)
 {
     //DRIVER_EXEC_RETURN(dpy, DestroyImageKHR(dpy, image));
     
-    FUN_ENTRY_GLAPI_CALL(DEBUG_DEPTH);
-    FUN_ENTRY(DEBUG_DEPTH);
+    FUN_ENTRY_GLAPI_CALL;
+    FUN_ENTRY;
 }
 
 //TODO: Implement the KHR_fence_sync extension
@@ -665,8 +665,8 @@ eglCreateSyncKHR(EGLDisplay dpy, EGLenum type, const EGLint *attrib_list)
 {
     //DRIVER_EXEC_RETURN(dpy, CreateSyncKHR(dpy, type, attrib_list));
     
-    FUN_ENTRY_GLAPI_CALL(DEBUG_DEPTH);
-    FUN_ENTRY(DEBUG_DEPTH);
+    FUN_ENTRY_GLAPI_CALL;
+    FUN_ENTRY;
 }
 
 EGLAPI EGLBoolean EGLAPIENTRY
@@ -674,8 +674,8 @@ eglDestroySyncKHR(EGLDisplay dpy, EGLSyncKHR sync)
 {
     //DRIVER_EXEC_RETURN(dpy, DestroySyncKHR(dpy, sync));
     
-    FUN_ENTRY_GLAPI_CALL(DEBUG_DEPTH);
-    FUN_ENTRY(DEBUG_DEPTH);
+    FUN_ENTRY_GLAPI_CALL;
+    FUN_ENTRY;
 }
 
 EGLAPI EGLint EGLAPIENTRY
@@ -683,7 +683,7 @@ eglClientWaitSyncKHR(EGLDisplay dpy, EGLSyncKHR sync, EGLint flags, EGLTimeKHR t
 {
     //DRIVER_EXEC_RETURN(dpy, ClientWaitSyncKHR(dpy, sync, flags, timeout));
     
-    FUN_ENTRY_GLAPI_CALL(DEBUG_DEPTH);
-    FUN_ENTRY(DEBUG_DEPTH);
+    FUN_ENTRY_GLAPI_CALL;
+    FUN_ENTRY;
 }
 */

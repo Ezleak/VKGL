@@ -418,7 +418,7 @@ void OpenGL::vkglGetDoublev (GLenum pname, GLdouble *data){
 }
 
 GLenum OpenGL::vkglGetError (void){
-    FUN_ENTRY(DEBUG_DEPTH);
+    //FUN_ENTRY(DEBUG_DEPTH);
     GET_CONTEXT(in_context_p)
 
     const auto error_vkgl = in_context_p->get_error();

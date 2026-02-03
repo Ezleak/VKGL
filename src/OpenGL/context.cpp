@@ -2488,7 +2488,7 @@ void OpenGL::Context::get_compressed_tex_image(const OpenGL::TextureTarget& in_t
 
 OpenGL::ErrorCode OpenGL::Context::get_error()
 {
-    FUN_ENTRY(DEBUG_DEPTH);
+    //FUN_ENTRY(DEBUG_DEPTH);
     
     vkgl_assert(m_gl_state_manager_ptr != nullptr);
 

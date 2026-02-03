@@ -3,20 +3,20 @@ on: [push, workflow_dispatch]
 jobs:
   build:
     name: VKGL
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
     steps:
       - name: Setup Android NDK
-        uses: nttld/setup-ndk@v1
+        uses: nttld/setup-ndk@main
         id: setup-ndk
         with:
-          ndk-version: r26d
+          ndk-version: r29
           add-to-path: true
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@main
       - name: Build
         run: |
           $ANDROID_NDK_HOME/ndk-build NDK_PROJECT_PATH=. APP_BUILD_SCRIPT=./Android.mk NDK_APPLICATION_MK=./Application.mk
       - name: Upload
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@main
         with:
           name: VKGL
           path: ./

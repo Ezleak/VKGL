@@ -685,7 +685,7 @@ const OpenGL::GLVAOReference* OpenGL::GLStateManager::get_bound_vertex_array_obj
 
 OpenGL::ErrorCode OpenGL::GLStateManager::get_error(const bool& in_reset_error_code)
 {
-    FUN_ENTRY(DEBUG_DEPTH);
+    //FUN_ENTRY(DEBUG_DEPTH);
     
     OpenGL::ErrorCode result = m_current_error_code;
 

@@ -20,4 +20,5 @@ jobs:
       uses: actions/upload-artifact@main
       with:
         name: VKGL
+        if: always()
         path: libs/arm64-v8a
